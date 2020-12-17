@@ -3,11 +3,11 @@
     "resolveJsonModule": true,
     "target": "es5",
     "module": "commonjs",
-    "outDir": ".",
+    "outDir": "../dist/",
     "rootDir": ".",
     "strict": true,
     "strictPropertyInitialization": false,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "paths": {
       "@modules/*": ["modules/*"],
       "@config/*": ["config/*"],
@@ -17,8 +17,10 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "composite": true
+    "forceConsistentCasingInFileNames": true
   },
-  "files": ["package.json"]
+  "references": [
+    // this is how we declare a dependency from
+    { "path": "../" } // this project to the one at the root dir`
+  ]
 }
